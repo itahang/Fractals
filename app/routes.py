@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from .mandelbrot import mandelBrotWrapper
 from fastapi.responses import HTMLResponse
-from .utils import image_to_base64,genImage
+from .utils import genImage
 routes = APIRouter()
 
 @routes.get("/", response_class=HTMLResponse)
