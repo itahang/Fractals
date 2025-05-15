@@ -3,12 +3,11 @@ from pathlib import Path
 import ctypes
 import os
 
-# lib_path = ""
-lib_path = Path(__file__).parent.parent / "libs" / "mandelbrot.dll"
-# if os.name == "nt":
-#     lib_path = Path(__file__).parent.parent / "libs" / "mandelbrot.dll"
-# elif os.name == "posix":
-#     lib_path = Path(__file__).parent.parent / "libs" / "mandel.so"
+lib_path = ""
+if os.name == "nt":
+    lib_path = Path(__file__).parent.parent / "libs" / "mandelbrot.dll"
+elif os.name == "posix":
+    lib_path = Path(__file__).parent.parent / "libs" / "mandelbrot.so"
 
 
 def try_loadingLibrary():
