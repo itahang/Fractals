@@ -2,6 +2,10 @@ import cv2
 import base64
 import numpy as np
 
+def genImage(image: np.ndarray):
+    image = (image & 0xFF).astype(np.uint8) 
+    cv2.imwrite("static/temp1.png",image)
+
 def image_to_base64(image: np.ndarray) -> str:
     image = (image & 0xFF).astype(np.uint8) 
     success, encoded_image = cv2.imencode('.png', image)

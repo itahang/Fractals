@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandelbrot Set Generator</title>
+</head>
+
+<body>
+    <h1>Mandelbrot Set</h1>
+
+    <form action="/mandel" method="get">
+        <label for="width">Width:</label>
+        <input type="number" id="width" name="width" value="1080" required><br><br>
+
+        <label for="height">Height:</label>
+        <input type="number" id="height" name="height" value="1080" required><br><br>
+
+        <label for="zoom">Zoom:</label>
+        <input type="number" step="0.1" id="zoom" name="zoom" value="1000.0" required><br><br>
+
+        <label for="center_x">Center X:</label>
+        <input type="number" step="0.01" id="center_x" name="center_x" value="-0.5" required><br><br>
+
+        <label for="center_y">Center Y:</label>
+        <input type="number" step="0.01" id="center_y" name="center_y" value="0.0" required><br><br>
+
+        <button type="submit">Generate</button>
+    </form>
+
+    <h2>Result:</h2>
+    <img src="static/temp1.png" alt="Mandelbrot Image" style="max-width: 100%; height: auto;">
+</body>
+
+</html>
