@@ -3,4 +3,4 @@ from fastapi import routing
 from .routes import routes
 
 app = FastAPI()
-app.add_route(routes)
+app.include_router(routes)
